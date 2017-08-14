@@ -8,15 +8,15 @@ class Api::V1::RestaurantsController < ApplicationController
       http.request(request)
     end
 
-    businesses = response.body
+    restaurants = response.body
 
-    render json: businesses
+    render json: restaurants
   end
 
   private
 
   def uri_string
-    uri = "https://api.yelp.com/v3/businesses/search?limit=20&location=#{params[:city]}"
+    uri = "https://api.yelp.com/v3/businesses/search?term=restaurants&limit=20&location=#{params[:location]}"
     if params[:sort_by] == "rating"
       uri += '&sort_by=rating'
     end
