@@ -25,6 +25,3 @@ Please build a web application that provides an easy to use, sortable interface 
 3. Run `bundle install` to install dependencies in your Rails application, and then run `rake db:create && rake db:migrate` (we're creating the database to appease Rails, even though we're not persisting to it).
 4. Run `bundle exec figaro install` to create a `database.yml` file in the Rails `config` directory; here you can enter/copy-paste your access token as a key-value pair, i.e. `token: YOUR_ACCESS_TOKEN`
 5. Start your Rails server by running `rails s` from the command line, making note of the port on which you're hosting (typically 3000). You're now ready to hit your Rails server go-between between the Yelp Fusion API and your browser client.
-
-## Use
-1. Log in using the client ID and secret from Yelp. (In addition to logging you in to the app, this will get and locally cache the Yelp API access token necessary for making all subsequent API calls.)
